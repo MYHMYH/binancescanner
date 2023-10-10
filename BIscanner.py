@@ -103,6 +103,7 @@ def process_message(msg):
 			elif(first_run_flag == 1):
 				ct = time.time()
 				for stored_currency in price_list:
+					print(stored_currency)
 					if(x.symbol == stored_currency.symbol and (ct - stored_currency.time_stamp) > 1):
 						priceDiff = ((x.bid_price - stored_currency.bid_price) / stored_currency.bid_price) * 100
 						volDiff = ((x.volume - stored_currency.volume) / stored_currency.volume) * 100
